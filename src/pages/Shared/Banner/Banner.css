@@ -1,0 +1,9 @@
+.banner-height {
+  height: 37.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .banner-height {
+    height: auto;
+  }
+}

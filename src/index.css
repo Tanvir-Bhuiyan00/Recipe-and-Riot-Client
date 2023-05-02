@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Crimson+Pro&display=swap");
+
+.project-color-one {
+  color: #ece6d6;
+}
+
+/* .project-bg-color-one {
+  background-color: #ece6d6;
+} */
+
+body {
+  background-color: #ece6d6 !important;
+}
+
+.project-color-two {
+  color: #2d2119 !important;
+}
+
+.project-bg-color-two {
+  background-color: #2d2119;
+}
+
+.project-color-three {
+  color: #c43e28;
+}
+
+.project-bg-color-three {
+  background-color: #c43e28;
+}
+
+.main-font-family {
+  font-family: "Crimson Pro", serif;
+}
+
+.text-font-family {
+  font-family: "Catamaran", sans-serif;
+}
+
+.banner-img {
+  filter: brightness(60%);
+}
+
+
+
+
+
+
+
+
+
+
+
