@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Crimson+Pro&display=swap");
 
 .project-color-one {
-  color: #ece6d6;
+  color: #ece6d6 !important;
 }
 
-/* .project-bg-color-one {
-  background-color: #ece6d6;
-} */
+.project-bg-color-one {
+  background-color: #ece6d6 !important;
+}
 
 body {
   background-color: #ece6d6 !important;
@@ -17,7 +17,7 @@ body {
 }
 
 .project-bg-color-two {
-  background-color: #2d2119;
+  background-color: #2d2119 !important;
 }
 
 .project-color-three {
@@ -25,7 +25,7 @@ body {
 }
 
 .project-bg-color-three {
-  background-color: #c43e28;
+  background-color: #c43e28 !important;
 }
 
 .main-font-family {
