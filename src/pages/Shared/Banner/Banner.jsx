@@ -2,9 +2,8 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import banner1 from "../../../assets/image/banner1.jpg";
 import banner2 from "../../../assets/image/banner2.jpg";
-import banner3 from "../../../assets/image/banner3.jpg";
 
-import './Banner.css'
+import "./Banner.css";
 const Banner = () => {
   return (
     <div>
@@ -32,28 +31,12 @@ const Banner = () => {
             alt="Second slide"
           />
 
-          <Carousel.Caption >
+          <Carousel.Caption>
             <h1 className="project-color-one main-font-family fw-semibold">
-            Stewed Meatballs with Tomato Sauce
+              Stewed Meatballs with Tomato Sauce
             </h1>
             <p className="text-font-family project-color-one">
               By Bahar Mia in April 05 2022
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 banner-img banner-height"
-            src={banner3}
-            alt="Second slide"
-          />
-
-          <Carousel.Caption >
-            <h1 className="project-color-one main-font-family fw-semibold">
-            Spicy Instant Noodles 
-            </h1>
-            <p className="text-font-family project-color-one">
-              By Ratan Chowdhury in june 21 2022
             </p>
           </Carousel.Caption>
         </Carousel.Item>
