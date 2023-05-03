@@ -1,29 +1,25 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
-import ChefCard from "../pages/Home/ChefCard/ChefCard";
-import LoginLayout from "../layouts/LoginLayout";
+
+
+import ViewRecipes from "../pages/Home/ViewRecipes/ViewRecipes";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LoginLayout></LoginLayout>,
-    children: [
-      {
-        path: "/",
-        element: <Navigate to="/home"></Navigate>,
-      },
-    ],
-  },
-  {
-    path: "home",
     element: <Main></Main>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>,
       },
-      
+      {
+        path: "/chef/:id",
+        element: <ViewRecipes></ViewRecipes>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chef/${params.id}`),
+      },
     ],
   },
 ]);
