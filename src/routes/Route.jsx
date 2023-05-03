@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home/Home";
 
 
 import ViewRecipes from "../pages/Home/ViewRecipes/ViewRecipes";
+import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/chef/${params.id}`),
       },
+      {
+        path:"*",
+        element:<ErrorPage></ErrorPage>
+      }
     ],
   },
 ]);
