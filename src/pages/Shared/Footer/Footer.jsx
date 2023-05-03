@@ -1,42 +1,67 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer style={{height:"20rem", marginTop:"7rem"}} className="project-bg-color-two py-3">
+    <footer style={{ marginTop:"7rem"}} className="project-bg-color-two py-3">
       <Container>
         <Row className="mt-4">
-          <Col xs={12} md={4}>
-            <h4>Brand Name</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Col xs={12} md={6}>
+            <h4 className="main-font-family fs-1 fw-medium project-color-one">Recipe & Riot</h4>
+            
           </Col>
-          <Col xs={12} md={2} className="mt-4 mt-md-0">
-            <h5>Navigation</h5>
+          <Col xs={12} md={3} className="mt-4 pt-2 mt-md-0">
+            <h5 className="main-font-family fs-3 fw-medium project-color-one">Navigation</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Home</a>
+              <Link
+              style={{ textDecoration: "none"}}
+              className="project-color-one"
+              to="/"
+            >
+              Home
+            </Link>
               </li>
               <li>
-                <a href="#">Blogs</a>
+              <Link
+              style={{ textDecoration: "none"}}
+              className="project-color-one"
+              to="/blogs"
+            >
+              Blogs
+            </Link>
               </li>
               <li>
-                <a href="#">About Us</a>
+              <Link
+              style={{ textDecoration: "none"}}
+              className="project-color-one"
+              to="/about"
+            >
+              About
+            </Link>
               </li>
             </ul>
           </Col>
-          <Col xs={12} md={6} className="mt-4 mt-md-0">
-            <h5>Legal</h5>
+          <Col xs={12} md={3} className="mt-4 pt-2 mt-md-0">
+            <h5 className="main-font-family fs-3 fw-medium project-color-one">Legal</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Terms and Conditions</a>
+              <Link
+              style={{ textDecoration: "none"}}
+              className="project-color-one"
+              to="/terms"
+            >
+              Terms and Conditions
+            </Link>
               </li>
             </ul>
           </Col>
         </Row>
-        <Row className="mt-5 pt-5">
+        <Row className="mt-5">
           <Col className="mt-4">
             <p className="text-center text-muted">
-              Copyright © {new Date().getFullYear()}
+              Copyright by © Recipe & Riot in {new Date().getFullYear()}
             </p>
           </Col>
         </Row>

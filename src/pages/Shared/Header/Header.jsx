@@ -28,9 +28,16 @@ const Header = () => {
             <Link
               style={{ textDecoration: "none"}}
               className="project-color-three ms-3"
-              to="/blog"
+              to="/blogs"
             >
-              Blog
+              Blogs
+            </Link>
+            <Link
+              style={{ textDecoration: "none"}}
+              className="project-color-three ms-3"
+              to="/about"
+            >
+              About
             </Link>
           </Nav>
           <Nav>
