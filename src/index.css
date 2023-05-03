@@ -21,7 +21,7 @@ body {
 }
 
 .project-color-three {
-  color: #c43e28;
+  color: #c43e28 !important;
 }
 
 .project-bg-color-three {

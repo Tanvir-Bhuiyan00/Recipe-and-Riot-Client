@@ -17,7 +17,7 @@ const FoodMenu = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 700,
+    speed: 800,
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
