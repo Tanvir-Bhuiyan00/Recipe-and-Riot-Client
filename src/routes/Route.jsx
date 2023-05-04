@@ -8,6 +8,8 @@ import Blogs from "../pages/Blogs/Blogs";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
+import Terms from "../pages/Shared/Terms/Terms";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/chef/:id",
-        element: <ViewRecipes></ViewRecipes>,
+        element: (
+          <PrivateRoute>
+            <ViewRecipes></ViewRecipes>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/chef/${params.id}`),
       },
@@ -45,7 +51,11 @@ const router = createBrowserRouter([
       },
       {
         path: "register",
-        element: <Register></Register>
+        element: <Register></Register>,
+      },
+      {
+        path: "terms",
+        element: <Terms></Terms>,
       },
     ],
   },

@@ -56,7 +56,7 @@ const ChefDetails = ({ chef }) => {
                   </small>
                   <small>
                     <Link to={`/chef/${id}`}>
-                      <Button className="project-bg-color-three border border-0 project-color-one fw-semibold">
+                      <Button  className="project-bg-color-three border border-0 project-color-one fw-semibold">
                         View Recipes
                       </Button>
                     </Link>

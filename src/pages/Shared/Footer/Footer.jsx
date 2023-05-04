@@ -50,7 +50,7 @@ const Footer = () => {
               <Link
               style={{ textDecoration: "none"}}
               className="project-color-one"
-              to="/terms"
+              to="/login/terms"
             >
               Terms and Conditions
             </Link>
