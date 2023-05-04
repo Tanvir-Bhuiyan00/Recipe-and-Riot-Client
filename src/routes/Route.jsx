@@ -4,7 +4,10 @@ import Home from "../pages/Home/Home/Home";
 
 import ViewRecipes from "../pages/Home/ViewRecipes/ViewRecipes";
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
-import Blogs from "../pages/Home/Blogs/Blogs";
+import Blogs from "../pages/Blogs/Blogs";
+import LoginLayout from "../layouts/LoginLayout";
+import Login from "../pages/Login/Login/Login";
+import Register from "../pages/Login/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,20 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage></ErrorPage>,
+      },
+    ],
+  },
+  {
+    path: "login",
+    element: <LoginLayout></LoginLayout>,
+    children: [
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>
       },
     ],
   },
