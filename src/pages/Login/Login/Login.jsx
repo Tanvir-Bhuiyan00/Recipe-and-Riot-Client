@@ -15,8 +15,8 @@ const Login = () => {
                 <Form.Label style={{letterSpacing:"1px"}} className="text-font-family fs-5 fw-semibold ">Email Address</Form.Label>
                 <Form.Control
                   type="email"
+                  name="email"
                   placeholder="Enter Email"
-                  value=""
                   required
                 />
               </Form.Group>
@@ -25,8 +25,8 @@ const Login = () => {
               <Form.Label style={{letterSpacing:"1px"}} className="text-font-family fs-5 fw-semibold ">Password</Form.Label>
                 <Form.Control
                   type="password"
+                  name="password"
                   placeholder="Enter Password"
-                  value=""
                   required
                 />
               </Form.Group>
@@ -44,11 +44,11 @@ const Login = () => {
             </div>
             <div className="text-center">
               <p className="my-3">Or login with:</p>
-              <Button variant="outline-primary" className="m-2">
+              <Button  variant="outline-primary" className="m-2">
                 <FaGoogle />
                 &nbsp;Google Sign-in
               </Button>
-              <Button variant="outline-dark" className="m-2">
+              <Button  variant="outline-dark" className="m-2">
                 <FaGithub />
                 &nbsp;GitHub Sign-in
               </Button>
@@ -61,4 +61,3 @@ const Login = () => {
 };
 
 export default Login;
-<h2>Please Login</h2>;
