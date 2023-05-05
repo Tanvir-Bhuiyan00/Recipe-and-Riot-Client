@@ -10,7 +10,7 @@ const ChefCard = () => {
   
   const fetchChef = async () => {
     try {
-      const response = await fetch("http://localhost:5000/chef");
+      const response = await fetch("https://recipe-and-riot-server-tanvir-bhuiyan00.vercel.app/chef");
       const json = await response.json();
       if (json) {
         setChefs(json);

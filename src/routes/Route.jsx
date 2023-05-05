@@ -28,7 +28,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chef/${params.id}`),
+          fetch(`https://recipe-and-riot-server-tanvir-bhuiyan00.vercel.app/chef/${params.id}`),
       },
       {
         path: "blogs",

@@ -5,7 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const {  signIn, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,17 +23,46 @@ const Login = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         navigate(from, { replace: true });
+        form.reset();
+      })
+      .catch((error) => {
+        if (
+          error.code === "auth/user-not-found" ||
+          error.code === "auth/wrong-password"
+        ) {
+          alert("Invalid email or password");
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then((result) => {
+        const loggedUser = result.user;
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center ">
-        <Col md={6} sm={10}>
+    <Container className="mt-5 pt-5">
+      <Row className="justify-content-center">
+        <Col md={6} sm={10} className="shadow p-5 rounded">
           <h2 className="text-center mb-4 main-font-family project-color-two display-4 fw-medium">
             Please Login
           </h2>
@@ -89,11 +119,19 @@ const Login = () => {
           </div>
           <div className="text-center">
             <p className="my-3">Or login with:</p>
-            <Button variant="outline-primary" className="m-2">
+            <Button
+              onClick={handleGoogleSignIn}
+              variant="outline-primary"
+              className="m-2"
+            >
               <FaGoogle />
               &nbsp;Google Sign-in
             </Button>
-            <Button variant="outline-dark" className="m-2">
+            <Button
+              onClick={handleGithubSignIn}
+              variant="outline-dark"
+              className="m-2"
+            >
               <FaGithub />
               &nbsp;GitHub Sign-in
             </Button>

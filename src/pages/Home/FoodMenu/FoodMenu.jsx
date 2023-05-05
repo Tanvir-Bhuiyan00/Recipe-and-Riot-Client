@@ -8,7 +8,7 @@ const FoodMenu = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/food")
+    fetch("https://recipe-and-riot-server-tanvir-bhuiyan00.vercel.app/food")
       .then((res) => res.json())
       .then((data) => setFoods(data))
       .catch((err) => console.log(err));

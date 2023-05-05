@@ -41,6 +41,18 @@ body {
 }
 
 
+/* *Spinner Style* */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*Active route */
+.active-route{
+  color: #ece6d6 !important;
+}
 
 
 

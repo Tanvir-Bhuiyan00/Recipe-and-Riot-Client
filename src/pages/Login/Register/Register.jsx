@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [accepted, setAccepted] = useState(false);
-  const { createUser } = useContext(AuthContext);
+  const { createUser, logOut } = useContext(AuthContext);
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -16,9 +17,20 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    createUser(email, password)
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters');
+      return;
+    }
+
+    createUser(email, password, { setDisplayName: false })
       .then((result) => {
+        logOut();
         const createdUser = result.user;
+        form.reset();
+        updateProfile(createdUser, {
+          displayName: name,
+          photoURL: photoURL,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -29,9 +41,9 @@ const Register = () => {
     setAccepted(event.target.checked);
   };
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 pt-5">
       <Row className="justify-content-center ">
-        <Col md={6} sm={10}>
+        <Col md={6} sm={10} className="shadow p-5 rounded">
           <h2 className="text-center mb-4 main-font-family project-color-two display-4 fw-medium">
             Please Register
           </h2>
@@ -39,7 +51,7 @@ const Register = () => {
             <Form.Group controlId="formBasicName">
               <Form.Label
                 style={{ letterSpacing: "1px" }}
-                className="text-font-family fs-5 fw-semibold "
+                className="text-font-family fs-5 fw-semibold"
               >
                 Your Name
               </Form.Label>

@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { SiIfood } from "react-icons/si";
 import { HiHandThumbUp } from "react-icons/hi2";
 import RecipeInfo from "../RecipeInfo/RecipeInfo";
+import LazyLoad from "react-lazy-load";
 
 const ViewRecipes = () => {
   const recipeDetails = useLoaderData();
@@ -22,13 +23,15 @@ const ViewRecipes = () => {
     <div>
       <div className="project-bg-color-two">
         <Container className="py-5">
-          <Row className="py-5">
+          <Row className="">
             <Col md={6}>
-              <Image
-                src={chef_picture[1]}
-                rounded
-                className="w-100 mb-4 mb-md-0"
-              />
+              <LazyLoad height={762}>
+                <Image
+                  src={chef_picture[1]}
+                  rounded
+                  className="w-100 mb-4 mb-md-0"
+                />
+              </LazyLoad>
             </Col>
             <Col md={6} className="d-flex align-items-center">
               <div>
@@ -64,7 +67,12 @@ const ViewRecipes = () => {
       </div>
       <div className="mt-5">
         <Container>
-          <h1 style={{letterSpacing:"2px"}} className="main-font-family display-5 fw-semibold text-center project-color-three mb-5">{chef_name} Recipes</h1>
+          <h1
+            style={{ letterSpacing: "2px" }}
+            className="main-font-family display-5 fw-semibold text-center project-color-three mb-5"
+          >
+            {chef_name} Recipes
+          </h1>
           <RecipeInfo recipeCards={recipeCards}></RecipeInfo>
         </Container>
       </div>

@@ -6,6 +6,7 @@ import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
 import { Store } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
+import LazyLoad from "react-lazy-load";
 
 const RecipeInfo = ({ recipeCards }) => {
   const [favoriteBtns, setFavoriteBtns] = useState({});
@@ -35,11 +36,13 @@ const RecipeInfo = ({ recipeCards }) => {
         <Col className="mb-5">
           <Card className="project-bg-color-one h-100 border border-0 shadow">
             <div className="m-4 rounded">
-              <Card.Img
-                className="rounded"
-                variant="top"
-                src={recipeCards[0].recipe_img}
-              />
+              
+                <Card.Img
+                  className="rounded"
+                  variant="top"
+                  src={recipeCards[0].recipe_img}
+                />
+              
             </div>
             <Card.Body className="mx-4">
               <div style={{ height: "100px" }}>
@@ -101,11 +104,13 @@ const RecipeInfo = ({ recipeCards }) => {
         <Col className="mb-5">
           <Card className="project-bg-color-one border border-0 shadow h-100 ">
             <div className="m-4 rounded">
-              <Card.Img
-                className="rounded"
-                variant="top"
-                src={recipeCards[1].recipe_img}
-              />
+              
+                <Card.Img
+                  className="rounded"
+                  variant="top"
+                  src={recipeCards[1].recipe_img}
+                />
+              
             </div>
             <Card.Body className="mx-4">
               <div style={{ height: "100px" }}>
@@ -167,11 +172,13 @@ const RecipeInfo = ({ recipeCards }) => {
         <Col className="mb-5 md">
           <Card className="project-bg-color-one border border-0 shadow h-100 ">
             <div className="m-4 rounded">
-              <Card.Img
-                className="rounded"
-                variant="top"
-                src={recipeCards[2].recipe_img}
-              />
+              
+                <Card.Img
+                  className="rounded"
+                  variant="top"
+                  src={recipeCards[2].recipe_img}
+                />
+            
             </div>
             <Card.Body className="mx-4">
               <div style={{ height: "100px" }}>
