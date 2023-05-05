@@ -31,7 +31,7 @@ const ChefCard = () => {
       <h2 className="main-font-family display-5 fw-semibold text-center project-color-three mb-5">
         OUR TOP CHEF
       </h2>
-      <Row xs={1} md={2} className="g-4 my-5">
+      <Row xs={1} md={2} lg={3} className="g-4 my-5">
         {
           chefs.map(chef=> <ChefDetails key={chef.id} chef={chef}></ChefDetails>)
         }

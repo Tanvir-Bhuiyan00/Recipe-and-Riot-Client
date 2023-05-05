@@ -9,9 +9,11 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <FoodPosts></FoodPosts>
-      <FoodMenu></FoodMenu>
       <ChefCard></ChefCard>
+      <FoodMenu></FoodMenu>
+      <FoodPosts></FoodPosts>
+      
+      
     </div>
   );
 };
