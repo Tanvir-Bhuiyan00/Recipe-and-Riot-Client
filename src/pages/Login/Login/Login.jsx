@@ -30,7 +30,7 @@ const Login = () => {
           error.code === "auth/user-not-found" ||
           error.code === "auth/wrong-password"
         ) {
-          alert("Invalid email or password");
+          alert("Invalid email or password , Reload !!!");
         } else {
           console.log(error);
         }
@@ -41,7 +41,7 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
@@ -52,7 +52,7 @@ const Login = () => {
     signInWithGithub()
       .then((result) => {
         const loggedUser = result.user;
-        
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);

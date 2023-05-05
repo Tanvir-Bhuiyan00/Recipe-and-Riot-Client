@@ -4,6 +4,8 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
+import { Store } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 const Register = () => {
   const [accepted, setAccepted] = useState(false);
@@ -18,11 +20,23 @@ const Register = () => {
     const password = form.password.value;
 
     if (password.length < 6) {
-      alert('Password must be at least 6 characters');
+      Store.addNotification({
+        title: "Password",
+        message: "Password must be at least 6 characters",
+        type: "warning",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 3000,
+          onScreen: true,
+        },
+      });
       return;
     }
 
-    createUser(email, password, { setDisplayName: false })
+    createUser(email, password)
       .then((result) => {
         logOut();
         const createdUser = result.user;
@@ -40,6 +54,7 @@ const Register = () => {
   const handleAccepted = (event) => {
     setAccepted(event.target.checked);
   };
+
   return (
     <Container className="mt-5 pt-5">
       <Row className="justify-content-center ">

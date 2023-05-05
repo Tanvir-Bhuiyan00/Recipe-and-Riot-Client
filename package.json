@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@progress/kendo-react-pdf": "^5.13.1",
+    "@progress/kendo-theme-default": "^6.3.0",
     "bootstrap": "^5.2.3",
     "firebase": "^9.21.0",
     "localforage": "^1.10.0",
