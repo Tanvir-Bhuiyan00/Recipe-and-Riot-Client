@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import Terms from "../pages/Shared/Terms/Terms";
 import PrivateRoute from "./PrivateRoute";
+import About from "../pages/Home/About/About";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path:"about",
+        element: <About></About>
       },
 
       {
