@@ -36,7 +36,7 @@ const FoodMenu = () => {
   return (
     <Container className="mt-5">
       <h2 className="main-font-family display-5 fw-semibold text-center project-color-three mb-5">
-        RECIPES OF THE WEEK
+        TOP FOOD POSTS OF THE WEEK
       </h2>
       <Slider {...settings}>
         {foods.map((food) => (

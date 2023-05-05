@@ -11,6 +11,7 @@ import LazyLoad from "react-lazy-load";
 const RecipeInfo = ({ recipeCards }) => {
   const [favoriteBtns, setFavoriteBtns] = useState({});
 
+  //* favorite notification
   const handleFavoriteClick = (id) => {
     setFavoriteBtns({ ...favoriteBtns, [id]: true });
     Store.addNotification({

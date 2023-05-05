@@ -4,19 +4,11 @@ This project is a web application built with React and Firebase that provides a 
 
 ## Table of Contents
 
-- Installation
 - Usage
-- Features
+- About
 - Technologies Used
 - Live site link
 
-## Installation
-
-- npm create vite@latest name-of-your-project -- --template react
-- follow prompts
-- cd <your new project directory>
-- npm install react-router-dom localforage match-sorter sort-by
-- npm run dev
 
 ## Usage
 

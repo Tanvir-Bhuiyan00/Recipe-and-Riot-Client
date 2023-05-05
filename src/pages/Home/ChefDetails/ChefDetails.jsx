@@ -24,6 +24,7 @@ const ChefDetails = ({ chef }) => {
             }}
           />
         </LazyLoad>
+
         <Card.Body className="d-flex flex-column justify-content-between ">
           <div>
             <Card.Title
@@ -32,6 +33,7 @@ const ChefDetails = ({ chef }) => {
             >
               {chef_name}
             </Card.Title>
+
             <Card.Text className="project-color-two text-font-family">
               <span className="project-color-two fw-semibold">Experience:</span>{" "}
               {experience}
@@ -43,6 +45,7 @@ const ChefDetails = ({ chef }) => {
               {recipes.recipes_number}
             </Card.Text>
           </div>
+
           <div className="project-color-two text-font-family d-flex justify-content-between align-items-center">
             <Card.Text className="text-body-secondary pt-3 d-flex">
               <HiHandThumbUp
@@ -51,6 +54,7 @@ const ChefDetails = ({ chef }) => {
               ></HiHandThumbUp>{" "}
               <span className="fs-6 ms-1 fw-semibold"> {likes} Likes</span>
             </Card.Text>
+
             <div>
               <Link to={`/chef/${id}`}>
                 <Button className="project-bg-color-three border border-0 project-color-one fw-semibold">
